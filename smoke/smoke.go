@@ -18,8 +18,8 @@ func main() {
 	defer rpio.Close()
 
 	pin.Input()
-	p18.Mode(rpio.Pwm)
-	p18.Freq(0)
+	p18.Pwm()
+	p18.Freq(38000 * 4)
 	p18.DutyCycle(1, 0)
 	fmt.Println("开启烟雾检测...")
 	for {
@@ -28,7 +28,6 @@ func main() {
 		case rpio.High:
 			fmt.Println("没有烟雾！" + string(state))
 		case rpio.Low:
-			p18.Freq(38000 * 4)
 			p18.DutyCycle(1, 400)
 			fmt.Println("检测到烟雾！" + string(state))
 		}
