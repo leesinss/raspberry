@@ -16,6 +16,7 @@ func main() {
 
 	defer rpio.Close()
 
+	pin.Input()
 	pin.PullDown()
 
 	fmt.Println("开启烟雾检测...")
