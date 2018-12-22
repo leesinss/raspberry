@@ -28,6 +28,7 @@ func main() {
 		case rpio.High:
 			fmt.Println("没有烟雾！" + string(state))
 		case rpio.Low:
+			p18.Freq(38000 * 4)
 			p18.DutyCycle(1, 400)
 			fmt.Println("检测到烟雾！" + string(state))
 		}
