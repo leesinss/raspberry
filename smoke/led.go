@@ -17,7 +17,9 @@ func main() {
 
     defer rpio.Close()
 
-    p6.Input()
+    p6.Output()
+    p13.Output()
+    p19.Output()
 
     p6.Low();
     p13.Low();
