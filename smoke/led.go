@@ -24,16 +24,12 @@ func main() {
     ds.Low();
     shcp.Low();
     stcp.Low();
-    //for {
-    //    for j := 0; j < 8; j++ {
     for i := 0; i < 8; i++ {
         ds.High()
-        //shcp.Low()
+        shcp.Low()
         shcp.High()
 
     }
-    //stcp.Low()
+    stcp.Low()
     stcp.High()
-    //    }
-    //}
 }
