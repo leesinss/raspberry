@@ -11,17 +11,24 @@ func main() {
         fmt.Printf("GPIO 针脚读取错误！")
     }
 
-    p6 := rpio.Pin(6)
-    p19 := rpio.Pin(19)
-    p13 := rpio.Pin(13)
+    ds := rpio.Pin(6)
+    shcp := rpio.Pin(19)
+    stcp := rpio.Pin(13)
 
     defer rpio.Close()
 
-    p6.Output()
-    p13.Output()
-    p19.Output()
+    ds.Output()
+    shcp.Output()
+    stcp.Output()
 
-    p6.Low();
-    p13.Low();
-    p19.Low();
+    ds.Low();
+    shcp.Low();
+    stcp.Low();
+    for i := 0; i < 8; i++ {
+        ds.Low()
+        shcp.Low()
+        shcp.High()
+    }
+    stcp.Low()
+    stcp.High()
 }
