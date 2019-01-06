@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "github.com/stianeikeland/go-rpio"
+    "time"
 )
 
 func main() {
@@ -32,15 +33,16 @@ func main() {
                 } else {
                     ds.Low()
                 }
-                shcp.Low()
+                //shcp.Low()
                 shcp.High()
 
             }
-            stcp.Low()
+            //stcp.Low()
             stcp.High()
             if (j == 7) {
                 j = 0
             }
+            time.Sleep(1)
         }
     }
 }
