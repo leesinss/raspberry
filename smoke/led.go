@@ -25,16 +25,17 @@ func main() {
     shcp.Low();
     stcp.Low();
     for i := 0; i < 8; i++ {
-        if (i == 2) {
-            ds.High()
-
-        } else {
-            ds.Low()
+        for j := 0; j < 8; j++ {
+            if(i == j){
+                ds.High()
+            }else {
+                ds.Low()
+            }
+            shcp.Low()
+            shcp.High()
         }
-        shcp.Low()
-        shcp.High()
-
+        stcp.Low()
+        stcp.High()
     }
-    stcp.Low()
-    stcp.High()
+
 }
