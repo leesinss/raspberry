@@ -27,9 +27,9 @@ func main() {
     stcp.Low();
     for i := 0; i < 8; i++ {
         for j := 0; j < 8; j++ {
-            if(i == j){
+            if (i == j) {
                 ds.High()
-            }else {
+            } else {
                 ds.Low()
             }
             shcp.Low()
@@ -37,7 +37,15 @@ func main() {
         }
         stcp.Low()
         stcp.High()
-        time.Sleep(time.Microsecond * 1000)
+        time.Sleep(time.Millisecond * 500)
     }
 
+    for i := 0; i < 8; i++ {
+        ds.Low()
+        shcp.Low()
+        shcp.High()
+    }
+    stcp.Low()
+    stcp.High()
+}
 }
