@@ -27,7 +27,7 @@ func main() {
     //for {
     //    for j := 0; j < 8; j++ {
     for i := 0; i < 8; i++ {
-        ds.Low()
+        ds.High()
         //shcp.Low()
         shcp.High()
 
