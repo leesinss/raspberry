@@ -39,9 +39,6 @@ func main() {
             }
             //stcp.Low()
             stcp.High()
-            if (j == 7) {
-                j = 0
-            }
             time.Sleep(1)
         }
     }
