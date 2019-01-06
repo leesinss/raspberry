@@ -25,7 +25,7 @@ func main() {
     shcp.Low();
     stcp.Low();
     for i := 0; i < 8; i++ {
-        ds.Low()
+        ds.High()
         shcp.Low()
         shcp.High()
 
