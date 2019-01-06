@@ -37,7 +37,7 @@ func main() {
         }
         stcp.Low()
         stcp.High()
-        time.Sleep(time.Second * 1)
+        time.Sleep(time.Millisecond)
     }
 
 }
