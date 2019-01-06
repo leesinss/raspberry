@@ -26,10 +26,10 @@ func main() {
     stcp.Low();
     for i := 0; i < 8; i++ {
         ds.Low()
-        //shcp.Low()
+        shcp.Low()
         shcp.High()
 
     }
-    //stcp.Low()
+    stcp.Low()
     stcp.High()
 }
