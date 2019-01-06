@@ -48,4 +48,3 @@ func main() {
     stcp.Low()
     stcp.High()
 }
-}
